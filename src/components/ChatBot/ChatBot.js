@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useContext } from 'react';
+import React, { useState, useRef, useEffect, useContext, useCallback } from 'react';
 import { ThemeContext } from "../../context/ThemeContext";
 
 function ChatBot() {
@@ -45,7 +45,7 @@ function ChatBot() {
     };
 
     // Handle mouse move for dragging
-    const handleMouseMove = (e) => {
+    const handleMouseMove = useCallback((e) => {
         if (isDragging) {
             const newX = e.clientX - dragOffset.x;
             const newY = e.clientY - dragOffset.y;
@@ -59,12 +59,12 @@ function ChatBot() {
                 y: Math.min(Math.max(0, newY), maxY)
             });
         }
-    };
+    }, [isDragging, dragOffset]);
 
     // Handle mouse up to stop dragging
-    const handleMouseUp = () => {
+    const handleMouseUp = useCallback(() => {
         setIsDragging(false);
-    };
+    }, []);
 
     // Add and remove event listeners for dragging
     useEffect(() => {
@@ -75,7 +75,7 @@ function ChatBot() {
             window.removeEventListener('mousemove', handleMouseMove);
             window.removeEventListener('mouseup', handleMouseUp);
         };
-    }, [isDragging, dragOffset]);
+    }, [handleMouseMove, handleMouseUp]);
 
     // Handle user message submission
     const handleSubmit = (e) => {
