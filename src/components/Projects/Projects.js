@@ -30,7 +30,14 @@ function Projects() {
                     <p style={{ fontSize: 15, color: "#e0e0e0", marginBottom: 10 }}>
                         A personal portfolio website to showcase my projects, skills, and experience. Built with React and styled for a modern look.
                     </p>
-                    <a href="#" style={{ color: "#61dafb", textDecoration: "underline" }}>View Project</a>
+                    <a
+                        href="https://github.com/Rahul-Kumar-Sahu/portfolio1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#61dafb", textDecoration: "underline" }}
+                    >
+                        View Project
+                    </a>
                 </div>
                 <div style={{
                     background: "#232526",
@@ -45,7 +52,14 @@ function Projects() {
                     <p style={{ fontSize: 15, color: "#e0e0e0", marginBottom: 10 }}>
                         A responsive weather app using React and OpenWeatherMap API, featuring real-time weather updates and beautiful UI.
                     </p>
-                    <a href="#" style={{ color: "#61dafb", textDecoration: "underline" }}>View Project</a>
+                    <a
+                        href="https://github.com/Rahul-Kumar-Sahu/weather-app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#61dafb", textDecoration: "underline" }}
+                    >
+                        View Project
+                    </a>
                 </div>
                 {/* Add more project cards as needed */}
             </div>
