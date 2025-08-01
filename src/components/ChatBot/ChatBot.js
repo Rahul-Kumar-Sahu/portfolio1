@@ -130,13 +130,15 @@ function ChatBot() {
     };
 
     // Styles based on theme
+    const isMobile = window.innerWidth <= 768;
+
     const chatbotStyles = {
         chatbotIcon: {
             position: 'fixed',
-            bottom: '30px',
-            right: '30px',
-            width: '60px',
-            height: '60px',
+            bottom: isMobile ? '20px' : '30px',
+            right: isMobile ? '20px' : '30px',
+            width: isMobile ? '50px' : '60px',
+            height: isMobile ? '50px' : '60px',
             borderRadius: '50%',
             backgroundColor: isDarkMode ? '#61dafb' : '#0a7ea4',
             display: 'flex',
@@ -167,8 +169,9 @@ function ChatBot() {
             backdropFilter: 'blur(5px)',
         },
         chatModal: {
-            width: '380px',
-            maxHeight: '520px',
+            width: isMobile ? '90%' : '380px',
+            maxWidth: isMobile ? '350px' : 'none',
+            maxHeight: isMobile ? '450px' : '520px',
             borderRadius: '20px',
             backgroundColor: isDarkMode ? '#232526' : '#ffffff',
             boxShadow: '0 8px 30px rgba(0, 0, 0, 0.3)',

@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ChatBot from "./components/ChatBot";
 import styles from "./App.module.css";
+import './animations.css'; // Import animations
 
 // Main app content with theme context
 function AppContent() {
