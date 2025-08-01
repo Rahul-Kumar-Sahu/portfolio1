@@ -4,7 +4,7 @@ import { useResponsive } from "../../utils/responsive";
 
 function Header() {
     const { isDarkMode } = useContext(ThemeContext);
-    const { isMobile, isSmallMobile, isTablet, getImageSize } = useResponsive();
+    const { isMobile, isSmallMobile, getImageSize } = useResponsive();
 
     return (
         <header id="home" style={{
